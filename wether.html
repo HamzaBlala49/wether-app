@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-image: linear-gradient(130deg,rgb(217, 174, 2),rgb(10, 147, 239)); background-repeat: no-repeat; background-size: 100%;
+        }
+        .mycard{
+            background-color: rgba(231, 231, 231, 0.22);
+        }
+    </style>
+</head>
+<body >
+    
+    <div class="container p-5">
+        <h1 class="text-center text-white fw-bold">WETHER APP 🌞</h1>
+        <div class="row mt-5">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="mycard p-4">
+                    <h5 class="text-center border-bottom pb-2 text-white">LOCAL WITHER REPORT</h5>
+                    <div class="row">
+                        <div class="col-7 mt-3 text-center">
+                            <img src="./img/sun.png" class="img-fluid" width="160px" alt="">
+                            <p class="text-white mt-3">🧭 Lorem, ipsum dolor.</p>
+                        </div>
+                        <div class="col-5 text-white text-center mt-3">
+                            <h3>SUNDAY</h3>
+                            <h6>SUNNY</h6>
+                            <h4 class="mt-5 c-info" >22ْ C</h4>
+                            <h6 class="f-info">71.6 * F</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="mycard p-4">
+                    <h5 class="text-center border-bottom pb-2 text-white">LOCAL WITHER REPORT</h5>
+                    <div class="row">
+                        <div class="col-7 mt-3 text-center">
+                            <img src="./img/SunCloud.png" class="img-fluid" width="160px" alt="">
+                            <p class="text-white mt-3">🧭 Lorem, ipsum dolor.</p>
+                        </div>
+                        <div class="col-5 text-white text-center mt-3">
+                            <h3>MONDAY</h3>
+                            <h6>SUN CLOUD</h6>
+                            <h4 class="mt-5 c-info">22ْ C</h4>
+                            <h6 class="f-info">71.6  ْ F</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mycard text-white mt-5">
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 my-3 border-end  text-center">
+                <h4>TUESDAY</h4>
+                <img src="./img/Cloud.png" alt="">
+                <h4 class="mt-5 c-info">22ْ C</h4>
+                <h6 class="f-info">71.6  ْ F</h6>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 my-3 border-end text-center">
+                <h4>WEDNESDAY</h4>
+                <img src="./img/rain.png" alt="">
+                <h4 class="mt-5 c-info">22*C</h4>
+                <h6 class="f-info">71.6  ْ F</h6>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 my-3 border-end text-center">
+                <h4>THURSDAY</h4>
+                <img src="./img/RainThunder.png" alt="">
+                <h4 class="mt-5 c-info">22*C</h4>
+                <h6 class="f-info">71.6  ْ F</h6>
+            </div>
+            
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 my-3 text-center">
+                <h4>FRIDAY</h4>
+                <img src="./img/Snow.png" alt="">
+                <h4 class="mt-5 c-info">22*C</h4>
+                <h6 class="f-info">71.6  ْ F</h6>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        let imgTags = document.querySelectorAll("img");
+        let cTags = document.querySelectorAll(".c-info");
+        let fTags = document.querySelectorAll(".f-info");
+        let imgs = ["Cloud.png","rain.png","RainThunder.png","Snow.png","sun.png","SunCloud.png"];
+        let c = [22,30,42.5,26.9,20,34.3];
+        let f = [66,77,56.5,71.9,64,59.3];
+
+        imgTags.forEach(img=>{
+            let random = Math.floor(Math.random()*6);
+            img.src = `./img/${imgs[random]}`
+        })
+
+        cTags.forEach(el=>{
+            let random = Math.floor(Math.random()*6);
+            el.innerHTML= `${c[random]} ْC`
+        })
+
+        fTags.forEach(el=>{
+            let random = Math.floor(Math.random()*6);
+            el.innerHTML= `${f[random]} ْF`
+        })
+    </script>
+</body>
+</html>
